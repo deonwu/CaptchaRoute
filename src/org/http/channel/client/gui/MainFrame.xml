@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>	
+	<win name='LoginPanel' class='org.http.channel.client.gui.LoginPanel' >
+		<initPanel ref='xui' />
+	</win>
+	<win name='StatusPanel' class='org.http.channel.client.gui.ProxyStatusPanel' >
+		<initPanel ref='xui' />
+	</win>
+	
+	<win name='main' class='org.http.channel.client.gui.MainFrame'>
+		<size x='350' y='250' />
+		<title value="FreeGate--HTTP代理客户端" />
+		<!--  RootPane().setJMenuBar(menu.getMenuBar()); -->
+		<initPanel ref='xui' />
+		<rootPane>
+			<jMenuBar ref="menuBar" />
+		</rootPane>
+		
+		<!--<layout ref='null' /> -->
+		<add name="mainLayout" align="Center" class="javax.swing.JPanel">							
+			<layout name='cardLayout' class='java.awt.CardLayout' />
+			
+			<add ref="LoginPanel" align="login" />
+			<add ref="StatusPanel" align="status" />
+		</add>
+	</win>
+</root> 
